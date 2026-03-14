@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-       if (s.size() != t.size()) return false;
+        if (s.size() != t.size()) return false;
 
         vector<int> count(26, 0);
         for (char c : s) count[c - 'a']++;
@@ -9,8 +9,5 @@ public:
             if (--count[c - 'a'] < 0) return false;
         }
         return true;
-     
-        
-        
     }
 };
